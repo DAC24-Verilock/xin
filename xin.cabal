@@ -1,0 +1,165 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           xin
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/xin#readme>
+homepage:       https://github.com/githubuser/xin#readme
+bug-reports:    https://github.com/githubuser/xin/issues
+author:         Anonymous
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/xin
+
+library
+  exposed-modules:
+      Synthesis.Blocks
+      Synthesis.Generator
+      SystemVerilog.AST.BehavioralStatements.AssertionStatements
+      SystemVerilog.AST.BehavioralStatements.CaseStatements
+      SystemVerilog.AST.BehavioralStatements.ClockingBlock
+      SystemVerilog.AST.BehavioralStatements.ConditionalStatements
+      SystemVerilog.AST.BehavioralStatements.ContinuousAssignmentAndNetAliasStatements
+      SystemVerilog.AST.BehavioralStatements.LoopingStatements
+      SystemVerilog.AST.BehavioralStatements.ParallelAndSequentialBlocks
+      SystemVerilog.AST.BehavioralStatements.Patterns
+      SystemVerilog.AST.BehavioralStatements.ProceduralBlocksAndAssignments
+      SystemVerilog.AST.BehavioralStatements.Randsequences
+      SystemVerilog.AST.BehavioralStatements.Statements
+      SystemVerilog.AST.BehavioralStatements.SubroutineCallStatements
+      SystemVerilog.AST.BehavioralStatements.TimingControlStatements
+      SystemVerilog.AST.Declarations.AssertionDeclarations
+      SystemVerilog.AST.Declarations.BlockItemDeclarations
+      SystemVerilog.AST.Declarations.CovergroupDeclarations
+      SystemVerilog.AST.Declarations.DeclarationAssignments
+      SystemVerilog.AST.Declarations.DeclarationLists
+      SystemVerilog.AST.Declarations.DeclarationRanges
+      SystemVerilog.AST.Declarations.Delays
+      SystemVerilog.AST.Declarations.FunctionDeclarations
+      SystemVerilog.AST.Declarations.InterfaceDeclarations
+      SystemVerilog.AST.Declarations.LetDeclarations
+      SystemVerilog.AST.Declarations.ModuleParameterDeclarations
+      SystemVerilog.AST.Declarations.NetAndVariableTypes
+      SystemVerilog.AST.Declarations.PortDeclarations
+      SystemVerilog.AST.Declarations.Strengths
+      SystemVerilog.AST.Declarations.TaskDeclarations
+      SystemVerilog.AST.Declarations.TypeDeclarations
+      SystemVerilog.AST.Expressions.Concatenations
+      SystemVerilog.AST.Expressions.ExpressionLeftsideValues
+      SystemVerilog.AST.Expressions.Expressions
+      SystemVerilog.AST.Expressions.Numbers
+      SystemVerilog.AST.Expressions.Operators
+      SystemVerilog.AST.Expressions.Primaries
+      SystemVerilog.AST.Expressions.Strings
+      SystemVerilog.AST.Expressions.SubroutineCalls
+      SystemVerilog.AST.General.Attributes
+      SystemVerilog.AST.General.Comments
+      SystemVerilog.AST.General.CompilerDirectives
+      SystemVerilog.AST.General.Identifiers
+      SystemVerilog.AST.Instantiations.CheckerInstantiation
+      SystemVerilog.AST.Instantiations.GeneratedInstantiation
+      SystemVerilog.AST.Instantiations.InterfaceInstantiation
+      SystemVerilog.AST.Instantiations.ModuleInstantiation
+      SystemVerilog.AST.Instantiations.ProgramInstantiation
+      SystemVerilog.AST.Lib
+      SystemVerilog.AST.Preprocessor.Preprocessor
+      SystemVerilog.AST.PrimitiveInstances.PrimitiveGateAndSwitchTypes
+      SystemVerilog.AST.PrimitiveInstances.PrimitiveInstantiationAndInstances
+      SystemVerilog.AST.PrimitiveInstances.PrimitiveStrengths
+      SystemVerilog.AST.PrimitiveInstances.PrimitiveTerminals
+      SystemVerilog.AST.SourceText.CheckerItems
+      SystemVerilog.AST.SourceText.ClassItems
+      SystemVerilog.AST.SourceText.ConfigurationSourceText
+      SystemVerilog.AST.SourceText.Constraints
+      SystemVerilog.AST.SourceText.InterfaceItems
+      SystemVerilog.AST.SourceText.LibrarySourceText
+      SystemVerilog.AST.SourceText.ModuleItems
+      SystemVerilog.AST.SourceText.ModuleParametersAndPorts
+      SystemVerilog.AST.SourceText.PackageItems
+      SystemVerilog.AST.SourceText.ProgramItems
+      SystemVerilog.AST.SourceText.SystemVerilogSourceText
+      SystemVerilog.AST.SpecialNodes
+      SystemVerilog.AST.SpecifySection.SpecifyBlockDeclaration
+      SystemVerilog.AST.SpecifySection.SpecifyBlockTerminals
+      SystemVerilog.AST.SpecifySection.SpecifyPathDeclarations
+      SystemVerilog.AST.SpecifySection.SpecifyPathDelays
+      SystemVerilog.AST.SpecifySection.SpecifyTimingCheckEventDefinitions
+      SystemVerilog.AST.SpecifySection.SystemTimingCheckCommandArguments
+      SystemVerilog.AST.SpecifySection.SystemTimingCheckCommands
+      SystemVerilog.AST.UdpDeclarartionAndInstantiation.UdpBody
+      SystemVerilog.AST.UdpDeclarartionAndInstantiation.UdpDeclaration
+      SystemVerilog.AST.UdpDeclarartionAndInstantiation.UdpInstantiation
+      SystemVerilog.AST.UdpDeclarartionAndInstantiation.UdpPorts
+      Task.VerilockTask
+      Util.FileUtil
+      Util.Lit
+  other-modules:
+      Paths_xin
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-missing-export-lists
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , lens
+    , mtl
+    , random
+    , template-haskell
+    , text
+    , transformers
+  default-language: Haskell2010
+
+executable xin-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_xin
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , lens
+    , mtl
+    , random
+    , template-haskell
+    , text
+    , transformers
+    , xin
+  default-language: Haskell2010
+
+test-suite xin-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_xin
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , filepath
+    , lens
+    , mtl
+    , random
+    , template-haskell
+    , text
+    , transformers
+    , xin
+  default-language: Haskell2010

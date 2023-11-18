@@ -1,0 +1,7 @@
+gen
+case
+.stack-work/
+*~
+.DS_Store
+.metals/
+.vscode/
